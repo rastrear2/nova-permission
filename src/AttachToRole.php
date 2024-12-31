@@ -10,6 +10,7 @@ use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Spatie\Permission\Models\Role::class as ModelRole;
 
 class AttachToRole extends Action
 {
@@ -39,7 +40,7 @@ class AttachToRole extends Action
     public function fields(NovaRequest $request)
     {
         return [
-            Select::make('Role')->options(Role::get()->pluck('name',
+            Select::make('Role')->options(ModelRole::get()->pluck('name',
                 'id')->toArray())->displayUsingLabels(),
         ];
     }
