@@ -10,7 +10,7 @@ use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Spatie\Permission\Models\Role::class as ModelRole;
+use Spatie\Permission\Models\Role as ModelRole;
 
 class AttachToRole extends Action
 {
